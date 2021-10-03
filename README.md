@@ -1,4 +1,4 @@
-# Astronomy Toolkit
+# Raccoon Party
 [raccoonparty.net](https://raccoonparty.net/)
 
 ![Skychart Photo](http://i.imgur.com/JPqbVw6.png)
