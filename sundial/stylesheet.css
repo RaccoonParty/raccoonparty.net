@@ -1,0 +1,87 @@
+#location_select{
+	position: relative;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+
+#location_select input[type="text"]{
+	width: 60px;
+	/*height: 20px;*/
+}
+
+#search_field{
+	width: 500px !important;
+}
+
+#search_button{
+	position: relative;
+	padding: 4px;
+	font-size: 16px;
+	width: 70px;
+}
+
+#map {
+	position: relative;
+	width: 680px;
+	height: 500px;
+	background-color: #0F0F0F;
+
+}
+
+#time_select{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	background-color: #FFF;
+}
+
+#time_zone_input{
+	width: 40px;
+
+}
+
+#submit{
+	/*background-color: #F5F5F5;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+#submit input[type="button"]{
+	height: 50px;
+	width: 600px;
+	font-size: 20px;
+}
+
+#image_div{
+	position: relative;
+	width: 100%;
+	margin-top: 50px;
+/*	width: 80%; */
+}
+
+#sundial{
+	position: relative;
+	left: 2.5%;
+	/*margin-left: -410px !important;*/
+	width: 95% !important;
+}
+
+@media only screen and (max-device-width: 480px) {
+	#banner{
+		height: 50vh;
+	}
+	#content{
+		top: -30vh;
+		left: 0px;
+		width: 100%;
+	}
+	#title h1{
+		top: -110vh;
+	}
+	#title h2{
+		top: -110vh;
+	}
+
+}

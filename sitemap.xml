@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.raccoonparty.net/</loc>
+  <lastmod>2021-08-02T18:22:21+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/contact/</loc>
+  <lastmod>2021-08-02T18:22:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/bread/</loc>
+  <lastmod>2021-08-02T18:22:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/fractal_gallery/</loc>
+  <lastmod>2021-08-02T18:22:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/skychart_info/</loc>
+  <lastmod>2021-08-02T18:22:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/fractal/</loc>
+  <lastmod>2021-03-26T17:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/skychart/</loc>
+  <lastmod>2021-03-26T17:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/nbody/</loc>
+  <lastmod>2021-03-26T17:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/solar_system/</loc>
+  <lastmod>2021-03-26T17:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.raccoonparty.net/sundial/</loc>
+  <lastmod>2021-08-02T18:22:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+
+
+</urlset>
