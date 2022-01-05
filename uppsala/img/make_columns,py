@@ -1,0 +1,31 @@
+import imagesize
+
+list_file = open("files.txt", "r")
+html_file = open("columns.txt", "w")
+
+nCol = 2
+lines = list_file.read().splitlines()
+list_file.close()
+
+Nlines = len(lines)
+
+columns = [[], []]
+columnsHeights = [0, 0]
+
+for line in lines:
+        print(line)
+        width, height = imagesize.get("20210825_124938.jpg")
+
+        smallestColumnIndex = 0
+        for j in range(0,nCol):
+            if columnsHeights[j] < columnsHeights[smallestColumnIndex]:
+                smallestColumnIndex = j
+
+        columns[smallestColumnIndex].append(line);
+        columnsHeights[smallestColumnIndex] = columnsHeights[smallestColumnIndex] + height
+
+for column in columns:
+    html_file.write("<div class='column'>\n")
+    for line in column:
+        html_file.write("<img  src =\"img/" + line + "\" onClick=\"make_img_full(this)\"/>\n")
+    html_file.write("</div>\n\n")    
