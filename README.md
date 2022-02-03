@@ -13,16 +13,12 @@
 
 
 ### Features
+* Mandelbrot and Julia Set Generator
 * JavaScript skychart
 * THREE.js Solar System
 * N-Body Simulator
 * Sundial Generator
-* Mandelbrot and Julia Set Generator
 
-### Upcoming Features
-* Eclipses Animations
-* Astronomical Clock
-* Daily Ephemerides
 
 ### References and acknowledgements
 1. Star positions from the [Yale Bright Star Catalog](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50)

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Cylindrical Cavity Eigenfrequencies</title>
+    <script src="math.js"></script>
+  </head>
+
+  <body>
+  <h1>Cylindrical Cavity Eigenfrequencies</h1>
+
+
+  Radius: <input type = "text" id="radius" value = "94.5">mm<br>
+  Height: <input type = "text" id="height"  value = "85">mm<br>
+  Conductivity: <input type = "text" id="sigma"  value = "1.03E7">S/m<br>
+
+  <button type="button" onclick="getModes()">Submit</button>
+
+  <p id="TM_text"></p>
+  <p id="TE_text"></p>
+
+  <script>
+    var lightSpeed = 299792458;
+    var vaccuumPermeability = 4 * Math.PI * 1E-7;
+    var vaccuumPermittivity = 8.8541878128E-12;
+    var eta = sqrt(vaccuumPermeability/vaccuumPermittivity);
+
+
+    var N = 2;
+    var M = 3;
+    var P = 2;
+
+  function getModes() {
+    var radius = parseFloat(document.getElementById("radius").value) * 1E-3;
+    var height = parseFloat(document.getElementById("height").value) * 1E-3;
+    var sigma = parseFloat(document.getElementById("sigma").value);
+
+    var text = "";
+
+    //TM MODES
+    for (m = 0; m <= M; m++){
+      for (n = 1; n <= N; n++){
+        gammaMN = besselJZero(m, n);
+        if (m == 0)
+          gammaMNPrime = besselJZero(m, n+1, true);
+        else
+          gammaMNPrime = besselJZero(m, n, true);
+
+        text = text + "<br>";
+      //  text = text + "gamma" + m.toString() + n.toString() + " = " + gammaMN.toFixed(5) + "<br>"
+        for (p = 0; p <= P; p++){
+          var freqTM = lightSpeed * Math.sqrt(Math.pow(gammaMN/radius, 2) + Math.pow(p * Math.PI / height, 2)) / (2 * Math.PI * 1E9);
+          var freqTE = lightSpeed * Math.sqrt(Math.pow(gammaMNPrime/radius, 2) + Math.pow(p * Math.PI / height, 2)) / (2 * Math.PI * 1E9);
+
+          if(m == 0 && n == 1 && p == 0){
+            var omega = 2 * Math.PI * freqTM;
+            var lambdaS = Math.sqrt(omega * vaccuumPermeability *  sigma / 2);
+            var Rs = 1 / (lambdaS * sigma);
+
+            var Q0 = Math.sqrt(2 * radius * eta * sigma * gammaMN) / (2 * (1 + radius/height))
+            text = text + "TM" + m.toString() + n.toString() + p.toString() + "<br> Freq =  " + freqTM.toFixed(5) + " GHz<br>" +
+              "Q0 = " + Q0.toString()+ "<br><br>";
+            text = text + "TE" + m.toString() + n.toString() + p.toString() + ": " + freqTE.toFixed(5) + " GHz<br>"
+          }
+          else{
+            text = text + "TM" + m.toString() + n.toString() + p.toString() + ": " + freqTM.toFixed(5) + " GHz &emsp; &emsp;"
+            text = text + "TE" + m.toString() + n.toString() + p.toString() + ": " + freqTE.toFixed(5) + " GHz<br>"
+          }
+        }
+      }
+    }
+    document.getElementById("TM_text").innerHTML = text;
+
+    var text = "";
+    //TE MODES
+    for (m = 0; m <= M; m++){
+      for (n = 1; n <= N; n++){
+          text = text + "<br>";
+      //  text = text + "gamma" + m.toString() + n.toString() + " = " + gammaMN.toFixed(5) + "<br>"
+        for (p = 0; p <= P; p++){
+          var freq = lightSpeed * Math.sqrt(Math.pow(gammaMN/radius, 2) + Math.pow(p * Math.PI / height, 2)) / (2 * Math.PI * 1E9);
+          var omega = 2 * Math.PI * freq;
+          var lambdaS = Math.sqrt(omega * vaccuumPermeability *  sigma / 2);
+          var Rs = 1 / (lambdaS * sigma);
+            text = text + "TE" + m.toString() + n.toString() + p.toString() + ": " + freq.toFixed(5) + " GHz<br>"
+        }
+      }
+    }
+//    document.getElementById("TE_text").innerHTML = text;
+
+
+  }
+  </script>
+
+
+  </body>
+</html>

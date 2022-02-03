@@ -510,7 +510,7 @@ hr{
   background-color: #8E24AA;
 }
 
-.download .ribbon{
+.software .ribbon{
 	background-color: #4CAF50;
 }
 
@@ -529,6 +529,7 @@ hr{
 	display: inline;
 }
 
+
 .page:hover .cropper{
 	/*filter: grayscale(100%);*/
   /*-webkit-filter: grayscale(0%);
@@ -546,7 +547,12 @@ hr{
 	border-color: #8E24AA;
 }
 
-#main_pages .download:hover .page, .secondary_pages .download:hover .cropper{
+
+#main_pages .photo_gallery:hover .page, .secondary_pages .photo_gallery:hover .cropper{
+  border-color: #0097a7;
+}
+
+#main_pages .software:hover .page, .secondary_pages .software:hover .cropper{
 	border-color: #4CAF50;
 }
 
@@ -554,9 +560,6 @@ hr{
 	border-color: #AB47BC;
 }
 
-#main_pages .photo_gallery .ribbon, .secondary_pages .photo_gallery:hover .cropper{
-  border-color: #0097a7;
-}
 
 #main_pages .video .ribbon, .secondary_pages .video:hover .cropper{
 	border-color: #ef6c00;

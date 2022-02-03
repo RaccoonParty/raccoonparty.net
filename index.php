@@ -12,6 +12,22 @@
       <link rel="stylesheet" type="text/css" href="stylesheet.css" />
       <link rel="stylesheet" type="text/css" href="news_style.css" />
 
+				<!-- Matomo -->
+				<script>
+					var _paq = window._paq = window._paq || [];
+					/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+					_paq.push(['trackPageView']);
+					_paq.push(['enableLinkTracking']);
+					(function() {
+						var u="//raccoonparty.net/matomo/";
+						_paq.push(['setTrackerUrl', u+'matomo.php']);
+						_paq.push(['setSiteId', '1']);
+						var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+						g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+					})();
+				</script>
+				<!-- End Matomo Code -->
+
 </head>
 
   <body itemscope itemtype="http://schema.org/Product">
@@ -65,6 +81,24 @@
           </div>
         </a>
 -->
+
+<a href = "../fractal_gallery"  class="photo_gallery">
+       <div class = "page">
+         <div class = "cropper" style="background: url(../res/fractal_gallery.jpg); background-position: right;">
+
+         <div class = "ribbon">
+             <h2>Photo Gallery</h2>
+           </div>
+           <div class = "info">
+             <div class = "text">
+               <h3>Fractal Gallery</h3>
+               <h2>Generated using the Fractal Generator</h2>
+             </div>
+           </div>
+          </div>
+       </div>
+</a>
+
 
         <a href = "../bread" class="article">
           <div class = "page">
@@ -201,11 +235,11 @@
           </div>
         </a>
 
-        <a href = "../downloads/JavaFractal1.1.jar" target="_blank" class="download">
+        <a href = "../downloads/JavaFractal1.1.jar" target="_blank" class="software">
           <div class = "page">
             <div class = "cropper" style="background: url(../res/fractal.jpg)">
               <div class = "ribbon">
-                <h2>Download</h2>
+                <h2>Software</h2>
               </div>
               <div class = "info">
                 <div class = "text">
@@ -217,11 +251,11 @@
           </div>
         </a>
 
-        <a href = "../downloads/FunctionPlotter.jar" target="_blank" class="download">
+        <a href = "../downloads/FunctionPlotter.jar" target="_blank" class="software">
           <div class = "page">
             <div class = "cropper" style="background: url(../res/function.png)">
               <div class = "ribbon">
-                <h2>Download</h2>
+                <h2>Software</h2>
               </div>
               <div class = "info">
                 <div class = "text">
